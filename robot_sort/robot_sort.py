@@ -97,7 +97,25 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        pass
+        for i in range(0, len(arr) - 1):
+            cur_index = i
+            smallest_index = cur_index
+            # TO-DO: find next smallest element
+            # (hint, can do in 3 loc)
+            # Your code here
+            #cur_index in the array
+            minimum = arr[cur_index]
+            #for range of array from i+1 to len(array)
+            for j in range(i + 1, len(arr)):
+            #if element in array is less than curent_index
+                if arr[j] < minimum:
+                #let array[current_index] = array[j] in loop/list and smallest_index is now j in the array
+                    minimum = arr[j]
+                    smallest_index = j
+        #used to temperarly store previous i in array while  arr[i] being set as cur_index to later set temp as the smallest_index
+            temp = arr[i]
+            arr[i] = minimum
+            arr[smallest_index] = temp
 
 
 if __name__ == "__main__":
