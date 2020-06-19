@@ -5,6 +5,8 @@ Your function must utilize recursion. It cannot contain any loops.
 '''
 #Your function should take in a signle parameter (a string word)
 def count_th(word):
+#need to slice after every occurrence of "th"
+
     #need to include base case
     #if len(word) is less than 2:
     if len(word) < 2:
