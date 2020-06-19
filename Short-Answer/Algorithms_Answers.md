@@ -3,26 +3,24 @@
 ## Exercise I
 
 a) o(n): As the size of the input increases, the runtime or the space used will grow at the same rate. 
+ - " while (a < n * n * n) " is o(n^3) and " a += n * n " is O(n^2) once we divide n^3 / n^2 = n which is the running time of this pseudocode.
 
 
 b) O (n^2): As the size of the input increases, the runtime or space used will grow twice as fast
+ - outer loop "for i in range(n): ..." is O(n) and inner loop " while j < n: ..." is O(n) so n * n = n^2 which is our running time in this pseudocode.
 
 
 c) 0(n): As the size of the input increases, the runtime or the space used will grow at the same rate. 
+- Each time we run this code, we are increasing bunnyEars at the same rate so O(n) is our runtime. 
 
 ## Exercise II
 
-stories = n
-#a lot of eggs
-eggs = 
-If egg dropped on floor f >= will break
-else will survive
-
-- we have to create a binary search strategy since we can assume that all floors of building are in order -
+- we have to create some type of a binary search strategy since we can assume that all floors of building are in order
 -  three options: 1. our guess is correct, 2. guess is too high, 3. guess is too low 
+- if guess results in the egg not breaking, we can add one more to the floor and see if it breaks there, if it does break, then we have found f floor in which the eggs start to break in every floor after that. 
 
 
-- PSEUDOCODE
+- PSEUDOCODE -
 
 start = 0
 end = len of floor
@@ -36,5 +34,5 @@ while start < end:
             start = middle + 1
     else:
         end = middle -1
-        
+
 return -1
